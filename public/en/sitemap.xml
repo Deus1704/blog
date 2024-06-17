@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/blog/</loc>
+    <loc>https://deus1704.vercel.app/en/blog/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-in"
-                href="http://localhost:1313/blog/"
+                href="https://deus1704.vercel.app/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/blog/"
+                href="https://deus1704.vercel.app/en/blog/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/</loc>
+    <loc>https://deus1704.vercel.app/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-in"
-                href="http://localhost:1313/"
+                href="https://deus1704.vercel.app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://deus1704.vercel.app/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>https://deus1704.vercel.app/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-in"
-                href="http://localhost:1313/tags/"
+                href="https://deus1704.vercel.app/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://deus1704.vercel.app/en/tags/"
                 />
   </url>
 </urlset>

@@ -2,14 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>http://localhost:1313/en-in/sitemap.xml</loc>
+    <loc>https://deus1704.vercel.app/en-in/sitemap.xml</loc>
     
       <lastmod>2024-05-25T20:29:31+05:30</lastmod>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/en/sitemap.xml</loc>
+    <loc>https://deus1704.vercel.app/en/sitemap.xml</loc>
     
   </sitemap>
   
