@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Blog</title>
-    <link>https://deus1704.vercel.app/en/</link>
+    <link>http://localhost:1313/en/</link>
     <description>Recent content on My Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>All Rights Reserved</copyright>
-    <atom:link href="rss://deus1704.vercel.app/en/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="rss://localhost:1313/en/rss.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

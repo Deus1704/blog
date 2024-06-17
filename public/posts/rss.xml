@@ -1,20 +1,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on My Blog</title>
-        <link>https://deus1704.vercel.app/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>Recent content in Posts on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-in</language>
         <copyright>All Rights Reserved</copyright>
-        <lastBuildDate>Sat, 25 May 2024 20:29:31 +0530</lastBuildDate>
-        <atom:link href="rss://deus1704.vercel.app/posts/rss.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sat, 15 Jun 2024 20:29:31 +0530</lastBuildDate>
+        <atom:link href="rss://localhost:1313/posts/rss.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Blog 1: Rethinking Coalignment from Ground-up</title>
+            <link>http://localhost:1313/posts/blog_1/</link>
+            <pubDate>Sat, 15 Jun 2024 20:29:31 +0530</pubDate>
+            
+            <guid>http://localhost:1313/posts/blog_1/</guid>
+            <description>The Very Essence of Coalignment At its core, coalignment is all about making sure our solar images match up as best they can. It uses a few different techniques, like template matching and solar rotation correction, to get this done. This is really important when we&amp;rsquo;re trying to accurately track and study what&amp;rsquo;s happening on a part of sun over time. We re-thought the entire process of what our new API be providing to the users as well as its structure.</description>
+            <content type="html"><![CDATA[<h2 id="the-very-essence-of-coalignment">The Very Essence of Coalignment</h2>
+<p>At its core, coalignment is all about making sure our solar images match up as best they can. It uses a few different techniques, like template matching and solar rotation correction, to get this done. This is really important when we&rsquo;re trying to accurately track and study what&rsquo;s happening on a part of sun over time.
+We re-thought the entire process of what our new API be providing to the users as well as its structure.</p>
+<p><img alt="Naive Refactor" src="/images/proposed_struct.png"></p>
+<p>This was one of the idea that was very naive version, but focused entierly for the user&rsquo;s comfort in applying the coalignment methods.</p>
+<h2 id="the-basic-structure-we-finally-agreed-upon">The Basic Structure we finally agreed Upon</h2>
+<p><img alt="Internal Sturcture" src="/images/internal.png"></p>
+<p>We agreed to have this as the very basic structure which we would be working/developing upwards. The following example demonstrates the way it would work.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>aia_map1 <span style="color:#f92672">=</span> sunpy<span style="color:#f92672">.</span>map<span style="color:#f92672">.</span>Map(sunpy<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>sample<span style="color:#f92672">.</span>AIA_193_CUTOUT01_IMAGE)
+</span></span><span style="display:flex;"><span>aia_map2 <span style="color:#f92672">=</span> sunpy<span style="color:#f92672">.</span>map<span style="color:#f92672">.</span>Map(sunpy<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>sample<span style="color:#f92672">.</span>AIA_193_CUTOUT03_IMAGE)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Creating a template from aia_map1</span>
+</span></span><span style="display:flex;"><span>bottom_left <span style="color:#f92672">=</span> SkyCoord(<span style="color:#ae81ff">600</span> <span style="color:#f92672">*</span> u<span style="color:#f92672">.</span>arcsec, <span style="color:#f92672">-</span><span style="color:#ae81ff">500</span> <span style="color:#f92672">*</span> u<span style="color:#f92672">.</span>arcsec, frame<span style="color:#f92672">=</span>aia_map1<span style="color:#f92672">.</span>coordinate_frame)
+</span></span><span style="display:flex;"><span>top_right <span style="color:#f92672">=</span> SkyCoord(<span style="color:#ae81ff">800</span> <span style="color:#f92672">*</span> u<span style="color:#f92672">.</span>arcsec, <span style="color:#f92672">-</span><span style="color:#ae81ff">200</span> <span style="color:#f92672">*</span> u<span style="color:#f92672">.</span>arcsec, frame<span style="color:#f92672">=</span>aia_map1<span style="color:#f92672">.</span>coordinate_frame)
+</span></span><span style="display:flex;"><span>submap <span style="color:#f92672">=</span> aia_map1<span style="color:#f92672">.</span>submap(bottom_left, top_right<span style="color:#f92672">=</span>top_right)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>coaligned_map <span style="color:#f92672">=</span> coalignment_interface(<span style="color:#e6db74">&#34;match_template&#34;</span>,aia_map2, submap)
+</span></span></code></pre></div><p><img alt="combined image" src="/images/combined.png"></p>
+<p>I am currently implementing the decorator structure for the sunkit-image, but that would be covered in another blog.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Blog 0: The First Two Weeks</title>
-            <link>https://deus1704.vercel.app/posts/blog_0/</link>
+            <link>http://localhost:1313/posts/blog_0/</link>
             <pubDate>Sat, 25 May 2024 20:29:31 +0530</pubDate>
             
-            <guid>https://deus1704.vercel.app/posts/blog_0/</guid>
+            <guid>http://localhost:1313/posts/blog_0/</guid>
             <description>A summary of activities completed in the two weeks leading up to the start of the coding period. Table of Contents Wrapping up the draft pull request Incorporating suggestions for STARA &amp;amp; its examples Fixing the doc failures First Meet with Mentors After completing my end-semester exams, I was overwhelmed by the outstanding tasks that I had let accumulate over time. In order to address those, I tried resolving dependencies and package issues of the previous environments of sunpy &amp;amp; sunkit-image but, ultimately gave up and initialised a new environment.</description>
             <content type="html"><![CDATA[<h4 id="a-summary-of-activities-completed-in-the-two-weeks-leading-up-to-the-start-of-the-coding-period">A summary of activities completed in the two weeks leading up to the start of the coding period.</h4>
 <h2 id="table-of-contents">Table of Contents</h2>
