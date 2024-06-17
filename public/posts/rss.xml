@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on My Blog</title>
-        <link>http://localhost:1313/posts/</link>
+        <link>https://deus1704.vercel.app/posts/</link>
         <description>Recent content in Posts on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-in</language>
         <copyright>All Rights Reserved</copyright>
         <lastBuildDate>Sat, 15 Jun 2024 20:29:31 +0530</lastBuildDate>
-        <atom:link href="rss://localhost:1313/posts/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="rss://deus1704.vercel.app/posts/rss.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Blog 1: Rethinking Coalignment from Ground-up</title>
-            <link>http://localhost:1313/posts/blog_1/</link>
+            <link>https://deus1704.vercel.app/posts/blog_1/</link>
             <pubDate>Sat, 15 Jun 2024 20:29:31 +0530</pubDate>
             
-            <guid>http://localhost:1313/posts/blog_1/</guid>
+            <guid>https://deus1704.vercel.app/posts/blog_1/</guid>
             <description>The Very Essence of Coalignment At its core, coalignment is all about making sure our solar images match up as best they can. It uses a few different techniques, like template matching and solar rotation correction, to get this done. This is really important when we&amp;rsquo;re trying to accurately track and study what&amp;rsquo;s happening on a part of sun over time. We re-thought the entire process of what our new API be providing to the users as well as its structure.</description>
             <content type="html"><![CDATA[<h2 id="the-very-essence-of-coalignment">The Very Essence of Coalignment</h2>
 <p>At its core, coalignment is all about making sure our solar images match up as best they can. It uses a few different techniques, like template matching and solar rotation correction, to get this done. This is really important when we&rsquo;re trying to accurately track and study what&rsquo;s happening on a part of sun over time.
@@ -39,10 +39,10 @@ We re-thought the entire process of what our new API be providing to the users a
         
         <item>
             <title>Blog 0: The First Two Weeks</title>
-            <link>http://localhost:1313/posts/blog_0/</link>
+            <link>https://deus1704.vercel.app/posts/blog_0/</link>
             <pubDate>Sat, 25 May 2024 20:29:31 +0530</pubDate>
             
-            <guid>http://localhost:1313/posts/blog_0/</guid>
+            <guid>https://deus1704.vercel.app/posts/blog_0/</guid>
             <description>A summary of activities completed in the two weeks leading up to the start of the coding period. Table of Contents Wrapping up the draft pull request Incorporating suggestions for STARA &amp;amp; its examples Fixing the doc failures First Meet with Mentors After completing my end-semester exams, I was overwhelmed by the outstanding tasks that I had let accumulate over time. In order to address those, I tried resolving dependencies and package issues of the previous environments of sunpy &amp;amp; sunkit-image but, ultimately gave up and initialised a new environment.</description>
             <content type="html"><![CDATA[<h4 id="a-summary-of-activities-completed-in-the-two-weeks-leading-up-to-the-start-of-the-coding-period">A summary of activities completed in the two weeks leading up to the start of the coding period.</h4>
 <h2 id="table-of-contents">Table of Contents</h2>

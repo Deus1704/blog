@@ -2,51 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-06-18T20:29:31+05:30</lastmod>
+    <loc>https://deus1704.vercel.app/posts/blog_1/</loc>
+    <lastmod>2024-06-15T20:29:31+05:30</lastmod>
+  </url><url>
+    <loc>https://deus1704.vercel.app/tags/gsoc/</loc>
+    <lastmod>2024-06-15T20:29:31+05:30</lastmod>
+  </url><url>
+    <loc>https://deus1704.vercel.app/</loc>
+    <lastmod>2024-06-15T20:29:31+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://deus1704.vercel.app/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-in"
-                href="http://localhost:1313/"
+                href="https://deus1704.vercel.app/"
                 />
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-06-18T20:29:31+05:30</lastmod>
+    <loc>https://deus1704.vercel.app/posts/</loc>
+    <lastmod>2024-06-15T20:29:31+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/blog_0/</loc>
-    <lastmod>2024-05-25T20:29:31+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/gsoc/</loc>
-    <lastmod>2024-05-25T20:29:31+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-05-25T20:29:31+05:30</lastmod>
+    <loc>https://deus1704.vercel.app/tags/</loc>
+    <lastmod>2024-06-15T20:29:31+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://deus1704.vercel.app/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-in"
-                href="http://localhost:1313/tags/"
+                href="https://deus1704.vercel.app/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://deus1704.vercel.app/posts/blog_0/</loc>
+    <lastmod>2024-05-25T20:29:31+05:30</lastmod>
+  </url><url>
+    <loc>https://deus1704.vercel.app/blog/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/blog/"
+                href="https://deus1704.vercel.app/en/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-in"
-                href="http://localhost:1313/blog/"
+                href="https://deus1704.vercel.app/blog/"
                 />
   </url>
 </urlset>
