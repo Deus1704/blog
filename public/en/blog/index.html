@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Jayraj Dulange">
@@ -9,7 +9,10 @@
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
+<link href="/css/custom.css" rel="stylesheet">
 <link rel="canonical" href="https://deus1704.vercel.app/en/blog/" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pjax@VERSION/pjax.js"></script>
 
 
     <title>
@@ -68,14 +71,16 @@
 
 
 
-    </head>
+    <link href="/css/jplayer.blue.monday.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
 
-    
-        <body>
-    
-    
-        <div class="container">
-            <header class="header">
+
+<body>
+
+
+    <div class="container">
+        <header class="header">
     <span class="header__inner">
         <a href="/en" style="text-decoration: none;">
     <div class="logo">
@@ -187,8 +192,8 @@
 </header>
 
 
-            <div class="content">
-                
+        <div id="pjax-container" class="content">
+            
     
     
     <main class="posts">
@@ -206,10 +211,10 @@
 
     </main>
 
-            </div>
+        </div>
 
-            
-                <footer class="footer">
+        
+            <footer class="footer">
     
     
         <div class="footer__inner">
@@ -244,10 +249,30 @@
         </div>
 </footer>
 
-            
-        </div>
-
         
+    </div>
+
+    <div id="radio-player">
+        <img id="play" src="https://res.cloudinary.com/dchan630/image/upload/v1481676817/play_ierlvl.png" class="img-fluid" alt="Responsive image">
+        <audio id="player" controls autoplay>
+            Your browser does not support the audio element.
+        </audio>
+        <img id="pause" src="https://res.cloudinary.com/dchan630/image/upload/v1481676820/pause_nqfaht.png" class="img-fluid" alt="Responsive image">
+            <div class="music">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+    </div>
+
+    
 
 
 
@@ -255,5 +280,66 @@
 
 
 
-    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var pjax = new Pjax({
+                elements: "a", 
+                selectors: ["#pjax-container"]
+            });
+
+            document.addEventListener("pjax:send", function() {
+                
+            });
+
+            document.addEventListener("pjax:complete", function() {
+                
+            });
+
+            
+            var songs = [
+                '/music/hans-zimmer.mp3',
+                '/music/rage.mp3',
+                '/music/no-time-for-caution.mp3',
+                '/music/miles-davis-generique.mp3',
+                '/music/you-dont-know-what-love-is-cyberpunk-2077-91-9-royal-blue-radio.mp3',
+            ];
+            var player = document.getElementById('player');
+            var currentSongIndex = 0;
+            function loadAndPlaySong(index) {
+                player.src = songs[index];
+                player.play();
+            }
+            loadAndPlaySong(currentSongIndex);
+            player.addEventListener('ended', function() {
+                currentSongIndex = (currentSongIndex + 1) % songs.length;
+                loadAndPlaySong(currentSongIndex);
+            });
+            $('#pause').click(function() {
+                toggleAudio();
+            });
+
+            $('#play').click(function() {
+                toggleAudio();
+            });
+
+            function toggleAudio() {
+                var player = document.getElementById('player');
+                var musicDiv = $('.music');
+                if (player.paused) {
+                    player.play();
+                    $('#play').hide();
+                    $('#pause').show();
+                    musicDiv.show();
+                } else {
+                    player.pause();
+                    $('#play').show();
+                    $('#pause').hide();
+                    musicDiv.hide();
+                }
+            } 
+        });
+    </script>
+</body>
 </html>
