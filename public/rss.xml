@@ -1,85 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Posts on My Blog</title>
-        <link>https://deus1704.vercel.app/posts/</link>
-        <description>Recent content in Posts on My Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-in</language>
-        <copyright>All Rights Reserved</copyright>
-        <lastBuildDate>Sat, 15 Jun 2024 20:29:31 +0530</lastBuildDate>
-        <atom:link href="rss://deus1704.vercel.app/posts/rss.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>Blog 1: Rethinking Coalignment from Ground-up</title>
-            <link>https://deus1704.vercel.app/posts/blog_1/</link>
-            <pubDate>Sat, 15 Jun 2024 20:29:31 +0530</pubDate>
-            
-            <guid>https://deus1704.vercel.app/posts/blog_1/</guid>
-            <description>The Very Essence of Coalignment At its core, coalignment is all about making sure our solar images match up as best they can. It uses a few different techniques, like template matching and solar rotation correction, to get this done. This is really important when we&amp;rsquo;re trying to accurately track and study what&amp;rsquo;s happening on a part of sun over time. We re-thought the entire process of what our new API be providing to the users as well as its structure.</description>
-            <content type="html"><![CDATA[<h2 id="the-very-essence-of-coalignment">The Very Essence of Coalignment</h2>
-<p>At its core, coalignment is all about making sure our solar images match up as best they can. It uses a few different techniques, like template matching and solar rotation correction, to get this done. This is really important when we&rsquo;re trying to accurately track and study what&rsquo;s happening on a part of sun over time.
-We re-thought the entire process of what our new API be providing to the users as well as its structure.</p>
-<p><img alt="Naive Refactor" src="/images/proposed_struct.png"></p>
-<p>This was one of the idea that was very naive version, but focused entierly for the user&rsquo;s comfort in applying the coalignment methods.</p>
-<h2 id="the-basic-structure-we-finally-agreed-upon">The Basic Structure we finally agreed Upon</h2>
-<p><img alt="Internal Sturcture" src="/images/internal.png"></p>
-<p>We agreed to have this as the very basic structure which we would be working/developing upwards. The following example demonstrates the way it would work.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>aia_map1 <span style="color:#f92672">=</span> sunpy<span style="color:#f92672">.</span>map<span style="color:#f92672">.</span>Map(sunpy<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>sample<span style="color:#f92672">.</span>AIA_193_CUTOUT01_IMAGE)
-</span></span><span style="display:flex;"><span>aia_map2 <span style="color:#f92672">=</span> sunpy<span style="color:#f92672">.</span>map<span style="color:#f92672">.</span>Map(sunpy<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>sample<span style="color:#f92672">.</span>AIA_193_CUTOUT03_IMAGE)
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### Creating a template from aia_map1</span>
-</span></span><span style="display:flex;"><span>bottom_left <span style="color:#f92672">=</span> SkyCoord(<span style="color:#ae81ff">600</span> <span style="color:#f92672">*</span> u<span style="color:#f92672">.</span>arcsec, <span style="color:#f92672">-</span><span style="color:#ae81ff">500</span> <span style="color:#f92672">*</span> u<span style="color:#f92672">.</span>arcsec, frame<span style="color:#f92672">=</span>aia_map1<span style="color:#f92672">.</span>coordinate_frame)
-</span></span><span style="display:flex;"><span>top_right <span style="color:#f92672">=</span> SkyCoord(<span style="color:#ae81ff">800</span> <span style="color:#f92672">*</span> u<span style="color:#f92672">.</span>arcsec, <span style="color:#f92672">-</span><span style="color:#ae81ff">200</span> <span style="color:#f92672">*</span> u<span style="color:#f92672">.</span>arcsec, frame<span style="color:#f92672">=</span>aia_map1<span style="color:#f92672">.</span>coordinate_frame)
-</span></span><span style="display:flex;"><span>submap <span style="color:#f92672">=</span> aia_map1<span style="color:#f92672">.</span>submap(bottom_left, top_right<span style="color:#f92672">=</span>top_right)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>coaligned_map <span style="color:#f92672">=</span> coalignment_interface(<span style="color:#e6db74">&#34;match_template&#34;</span>,aia_map2, submap)
-</span></span></code></pre></div><p><img alt="combined image" src="/images/combined.png"></p>
-<p>I am currently implementing the decorator structure for the sunkit-image, but that would be covered in another blog.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Blog 0: The First Two Weeks</title>
-            <link>https://deus1704.vercel.app/posts/blog_0/</link>
-            <pubDate>Sat, 25 May 2024 20:29:31 +0530</pubDate>
-            
-            <guid>https://deus1704.vercel.app/posts/blog_0/</guid>
-            <description>A summary of activities completed in the two weeks leading up to the start of the coding period. Table of Contents Wrapping up the draft pull request Incorporating suggestions for STARA &amp;amp; its examples Fixing the doc failures First Meet with Mentors After completing my end-semester exams, I was overwhelmed by the outstanding tasks that I had let accumulate over time. In order to address those, I tried resolving dependencies and package issues of the previous environments of sunpy &amp;amp; sunkit-image but, ultimately gave up and initialised a new environment.</description>
-            <content type="html"><![CDATA[<h4 id="a-summary-of-activities-completed-in-the-two-weeks-leading-up-to-the-start-of-the-coding-period">A summary of activities completed in the two weeks leading up to the start of the coding period.</h4>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul>
-<li><a href="/posts/blog_0/#draft_pr">Wrapping up the draft pull request</a></li>
-<li><a href="/posts/blog_0/#issue1">Incorporating suggestions for STARA &amp; its examples</a></li>
-<li><a href="/posts/blog_0/#fix_doc_fails">Fixing the doc failures</a></li>
-<li><a href="/posts/blog_0/#first_meet">First Meet with Mentors</a></li>
-</ul>
-<p>After completing my end-semester exams, I was overwhelmed by the outstanding tasks that I had let accumulate over time.
-In order to address those, I tried resolving dependencies and package issues of the previous environments of
-sunpy &amp; sunkit-image but, ultimately gave up and initialised a new environment. After discussions with mentors, the project priorities were clarified, allowing me to efficiently plan &amp; complete my tasks during the community bonding period. What follows is the detailed account of all the tasks completed during these two weeks.</p>
-<h2 id="incorporating-suggestions-for-sunspot-tracking-and-recognition-algorithm-stara">Incorporating suggestions for Sunspot Tracking and Recognition Algorithm (STARA)</h2>
-<p>Incorporated suggestions and made several changes to the STARA example. Attempted to create a mock HMI continuum data with an artificial &ldquo;sunspot&rdquo; at a chosen location with a certain radius. But it did not meet the exact requirements of the STARA, hence no regions could be identified. The written mock hmi map are demonstrated below,</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><img alt="Mock HMI Map without Sunspot" src="/images/mock_wo.png"></th>
-<th style="text-align:center"><img alt="Mock HMI Map with Sunspot" src="/images/mock_withspot.png"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Mock HMI Map without Sunspot</td>
-<td style="text-align:center">Mock HMI Map with Sunspot</td>
-</tr>
-</tbody>
-</table>
-<p>Discussed alternative approaches with mentor Nabil regarding the mock HMI map. According to his suggestion I tried the HMI continuum test data present in <code>sunpy/data/test</code> directory, but it had some issues with the WCS hence STARA couldn&rsquo;t properly find the sunspot regions.</p>
-<h2 id="wrapping-up-the-draft-pull-request">Wrapping up the draft pull request</h2>
-<p>I began working on the transformation of a vector field some time ago but encountered challenges in validating the approach. Using Astropy for the transformation confirmed the accuracy of the function I wrote. The next step is to seek feedback from mentors and the SunPy community. But I still feel a need to test this more rigorously which can validate that this would work with different frames too. I studied about different frames provided by the SPICE toolkit and tried to match the sunpy frames and the SPICE frames and have confirmed that the function works with the static frames.</p>
-<h2 id="fixing-the-doc-failures">Fixing the doc failures</h2>
-<p>Two out of my three open pull requests encountered documentation failures due to incorrect referencing of functions or modules, or example galleries. After studying the conventions of Sphinx and SunPy, I resolved these issues. Additionally, I discovered how to set up GitHub CI actions on my forks.</p>
-<h2 id="first-meet-with-mentors">First Meet with Mentors</h2>
-<p>In our initial meeting, my mentor Will provided a brief overview of the purpose of sunkit-image, emphasizing its primary function: coalignment. He explained the fundamental concepts of coalignment, user expectations, and desired functionalities of the new API. We also reviewed the current coalignment API&rsquo;s shortcomings. We agreed that an improved API was necessary and discussed my proposed structure for this enhancement. We also drafted a plan for the entire rethinking and redesigning the new API over the span of 4 weeks.</p>
-]]></content>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>My Blog</title>
+    <link>https://deus1704.vercel.app/</link>
+    <description>Recent content on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-in</language>
+    <copyright>All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 15 Jun 2024 20:29:31 +0530</lastBuildDate>
+    <atom:link href="rss://deus1704.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog 1: Rethinking Coalignment from Ground-up</title>
+      <link>https://deus1704.vercel.app/posts/blog_1/</link>
+      <pubDate>Sat, 15 Jun 2024 20:29:31 +0530</pubDate>
+      <guid>https://deus1704.vercel.app/posts/blog_1/</guid>
+      <description>The Very Essence of Coalignment At its core, coalignment is all about making sure our solar images match up as best they can. It uses a few different techniques, like template matching and solar rotation correction, to get this done. This is really important when we&amp;rsquo;re trying to accurately track and study what&amp;rsquo;s happening on a part of sun over time. We re-thought the entire process of what our new API be providing to the users as well as its structure.</description>
+    </item>
+    <item>
+      <title>Journey to Google Summer of Code 2024</title>
+      <link>https://deus1704.vercel.app/posts/journey/</link>
+      <pubDate>Fri, 07 Jun 2024 20:29:31 +0530</pubDate>
+      <guid>https://deus1704.vercel.app/posts/journey/</guid>
+      <description>Hey Jayraj, What&amp;rsquo;s your story about getting into GSoC? One of the most repeatedly asked question since the contributor results got announced by Google. All right peeps, lets do this one last time ;)&#xA;What is GSoC you say? Well, Google Summer of Code (GSoC) is a global program focused on bringing more student developers into open source software development. Students work with an open-source organization on a 12+ week programming project during summer.</description>
+    </item>
+    <item>
+      <title>Blog 0: The First Two Weeks</title>
+      <link>https://deus1704.vercel.app/posts/blog_0/</link>
+      <pubDate>Sat, 25 May 2024 20:29:31 +0530</pubDate>
+      <guid>https://deus1704.vercel.app/posts/blog_0/</guid>
+      <description>A summary of activities completed in the two weeks leading up to the start of the coding period. Table of Contents Wrapping up the draft pull request Incorporating suggestions for STARA &amp;amp; its examples Fixing the doc failures First Meet with Mentors After completing my end-semester exams, I was overwhelmed by the outstanding tasks that I had let accumulate over time. In order to address those, I tried resolving dependencies and package issues of the previous environments of sunpy &amp;amp; sunkit-image but, ultimately gave up and initialised a new environment.</description>
+    </item>
+  </channel>
 </rss>
