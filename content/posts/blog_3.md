@@ -12,7 +12,7 @@ While the mentors are waiting for community reviews on the new coalignment API, 
 
 
 ## Side Quest 1: [ASDA Example](https://github.com/sunpy/sunkit-image/pull/218)
-The long-needed [Automated Swirl Detection Algorithm (ASDA)](https://doi.org/10.3847/1538-4357/aabd34) example gallery in the sunkit-image is now ready. The ASDA module is for identifying the swirls or vortices in the 2D flow field of the solar atmosphere. ASDA offers a robust tool for detecting and analyzing the vortices in the solar atmosphere.
+The long-needed [Automated Swirl Detection Algorithm (ASDA)](https://doi.org/10.3847/1538-4357/aabd34) gallery example in the sunkit-image is now ready. The ASDA module is for identifying the swirls or vortices in the 2D flow field of the solar atmosphere. ASDA offers a robust tool for detecting and analyzing the vortices in the solar atmosphere.
 
 Swirls in the solar atmosphere provide insights into dynamic solar processes such as solar flares and coronal mass ejections. Detecting and analyzing these swirls helps understand the mechanisms driving these solar activities.
 
