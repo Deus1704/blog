@@ -6,8 +6,106 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-in</language>
         <copyright>All Rights Reserved</copyright>
-        <lastBuildDate>Sat, 15 Jun 2024 20:29:31 +0530</lastBuildDate>
+        <lastBuildDate>Wed, 03 Jul 2024 17:29:31 +0530</lastBuildDate>
         <atom:link href="rss://deus1704.vercel.app/posts/rss.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Blog 3: Side Quests Week</title>
+            <link>https://deus1704.vercel.app/posts/blog_3/</link>
+            <pubDate>Wed, 03 Jul 2024 17:29:31 +0530</pubDate>
+            
+            <guid>https://deus1704.vercel.app/posts/blog_3/</guid>
+            <description>While the mentors are waiting for community reviews on the new coalignment API, I&amp;rsquo;ve been diving into some fun side quests.
+Side Quest 1: ASDA Example The long-needed Automated Swirl Detection Algorithm (ASDA) example gallery in the sunkit-image is now ready. The ASDA module is for identifying the swirls or vortices in the 2D flow field of the solar atmosphere. ASDA offers a robust tool for detecting and analyzing the vortices in the solar atmosphere.</description>
+            <content type="html"><![CDATA[<p>While the mentors are waiting for community reviews on the new coalignment API, I&rsquo;ve been diving into some fun side quests.</p>
+<h2 id="side-quest-1-asda-examplehttpsgithubcomsunpysunkit-imagepull218">Side Quest 1: <a href="https://github.com/sunpy/sunkit-image/pull/218">ASDA Example</a></h2>
+<p>The long-needed <a href="https://doi.org/10.3847/1538-4357/aabd34">Automated Swirl Detection Algorithm (ASDA)</a> example gallery in the sunkit-image is now ready. The ASDA module is for identifying the swirls or vortices in the 2D flow field of the solar atmosphere. ASDA offers a robust tool for detecting and analyzing the vortices in the solar atmosphere.</p>
+<p>Swirls in the solar atmosphere provide insights into dynamic solar processes such as solar flares and coronal mass ejections. Detecting and analyzing these swirls helps understand the mechanisms driving these solar activities.</p>
+<p>The Gamma(Γ1 &amp; Γ2) values are used for identifying the vortex center and the vortex edges respectively.</p>
+<ul>
+<li>Gamma1 (Γ1): Identifies vortex centers by quantifying rotational motion.</li>
+<li>Gamma2 (Γ2): Detects vortex edges by measuring the coherence of swirling motion.</li>
+</ul>
+<p>These can be visualised as;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img alt="Gamma Visualization" src="/images/gammas.png"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Gamma values (Γ1 &amp; Γ2)</td>
+</tr>
+</tbody>
+</table>
+<p>Using these, the final map with the swirls identified looks like:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img alt="Swirl Map " src="/images/detected_swirls.png"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Swirl Map with Velocity Field</td>
+</tr>
+</tbody>
+</table>
+<p>The swirl map is crucial for visualizing fluid flow dynamics in the solar atmosphere, helping to identify the distribution, size, and characteristics of vortices.</p>
+<p>Magnifying a particular section of these for better understanding of the streamlines:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img alt="Magnified Swirl Map " src="/images/magnified_swirls.png"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Magnified Swirl Map Region with Streamlines</td>
+</tr>
+</tbody>
+</table>
+<p>Magnifying a specific region and overlaying streamlines allows for detailed analysis of flow patterns around swirls, aiding in understanding solar atmospheric dynamics and the interactions between different vortices.</p>
+<h2 id="side-quest-2-rotation-matrixhttpsgithubcomsunpysunpypull7452">Side Quest 2: <a href="https://github.com/sunpy/sunpy/pull/7452">Rotation Matrix</a></h2>
+<p>One of my very first pull requests in SunPy received reviews after a long hiatus. The feedback highlighted some implementation issues with the way the SpicePy API was being used. For instance, the sxform function only accepts a single ephemeris time, which required a workaround to obtain the correct state transformation matrix.
+With the invaluable help of Albert, these issues have been resolved and the test cases have been updated accordingly.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Blog 2: All Pieces Falling into place</title>
+            <link>https://deus1704.vercel.app/posts/blog_2/</link>
+            <pubDate>Thu, 20 Jun 2024 16:29:31 +0530</pubDate>
+            
+            <guid>https://deus1704.vercel.app/posts/blog_2/</guid>
+            <description>Update On New Coalignment The very first version of the new Coalignment API has been completely implemented, with all the test cases written! The architecture of the proposed co-alignment API closely mirrors the design principles found in SunPy&amp;rsquo;s rotation module, where a decorator pattern is employed to register specific methods designated for executing co-alignment tasks. Detailed documentation and guidelines on utilizing the new API are available for review at this docs.</description>
+            <content type="html"><![CDATA[<h2 id="update-on-new-coalignment">Update On New Coalignment</h2>
+<p>The very first version of the new Coalignment API has been completely implemented, with all the test cases written!
+The architecture of the proposed co-alignment API closely mirrors the design principles found in SunPy&rsquo;s rotation module, where a decorator pattern is employed to register specific methods designated for executing co-alignment tasks. Detailed documentation and guidelines on utilizing the new API are available for review at <a href="https://sunpy--207.org.readthedocs.build/projects/sunkit-image/en/207/how_to_guide/adding_a_coalignment_method.html">this</a> docs.</p>
+<h2 id="ideas-regarding-the-future-of-coalignment--major-concerns">Ideas regarding the Future of Coalignment &amp; Major Concerns</h2>
+<p>We have received numerous comments concerning the new co-alignment API, with the majority emphasizing the revision of the coalignment methods rather than the API structure itself.
+Consequently, I will be delving into the specific modifications occurring at the World Coordinate System (WCS) level throughout the coalignment process and the request of returning only the shifts and not applying the shift to the actual data.</p>
+<p>Although we are afraid that the suggestiong might be aiming to reinvent the reproject but again the fundamentally the approach for the two is different and needs to be thought of in brief before taking any major steps.
+We might be discussing this issue in the next community meet once Stuart is back.</p>
+<h2 id="update-on-stara">Update on STARA</h2>
+<p>The STARA module and the examples are completely ready, after along time of resolving conflicts, planning testing. We have come a long way with these test figures.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img alt="HMI Map" src="/images/test_hmi.png"></th>
+<th style="text-align:center"><img alt="HMI Map with Sunspot Identified" src="/images/stara_hmi.png"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Test HMI Continuum Map</td>
+<td style="text-align:center">Sunspot identified by STARA on the Test Map</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+        </item>
         
         <item>
             <title>Blog 1: Rethinking Coalignment from Ground-up</title>
@@ -40,7 +138,7 @@ We re-thought the entire process of what our new API be providing to the users a
         <item>
             <title>Journey to Google Summer of Code 2024</title>
             <link>https://deus1704.vercel.app/posts/journey/</link>
-            <pubDate>Fri, 07 Jun 2024 20:29:31 +0530</pubDate>
+            <pubDate>Thu, 06 Jun 2024 20:29:31 +0530</pubDate>
             
             <guid>https://deus1704.vercel.app/posts/journey/</guid>
             <description>Hey Jayraj, What&amp;rsquo;s your story about getting into GSoC? One of the most repeatedly asked question since the contributor results got announced by Google. All right peeps, lets do this one last time ;)
