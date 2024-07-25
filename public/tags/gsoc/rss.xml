@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-in</language>
     <copyright>All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 03 Jul 2024 17:29:31 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 00:29:31 +0530</lastBuildDate>
     <atom:link href="rss://deus1704.vercel.app/tags/gsoc/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog 4: Testing the New Coalignment with a Catch</title>
+      <link>https://deus1704.vercel.app/posts/blog_4/</link>
+      <pubDate>Tue, 23 Jul 2024 00:29:31 +0530</pubDate>
+      <guid>https://deus1704.vercel.app/posts/blog_4/</guid>
+      <description>Now that we&amp;rsquo;ve agreed on the structure of the co-alignment API and also laid down its foundation, all that&amp;rsquo;s left is to validate it through actual tests and generate some gallery examples.&#xA;First try with coaligning EIS raster with AIA map Let&amp;rsquo;s take a closer look at the EIS raster first. I found an AIA image close to the date_average of the raster.&#xA;EIS raster AIA Full-disc image Updated EIS At first glance, the results seemed promising, but a more detailed analysis revealed some discrepancies.</description>
+    </item>
     <item>
       <title>Blog 3: Side Quests Week</title>
       <link>https://deus1704.vercel.app/posts/blog_3/</link>

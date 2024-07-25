@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://deus1704.vercel.app/posts/blog_3/</loc>
-    <lastmod>2024-07-03T17:29:31+05:30</lastmod>
+    <loc>https://deus1704.vercel.app/posts/blog_4/</loc>
+    <lastmod>2024-07-23T00:29:31+05:30</lastmod>
   </url><url>
     <loc>https://deus1704.vercel.app/tags/gsoc/</loc>
-    <lastmod>2024-07-03T17:29:31+05:30</lastmod>
+    <lastmod>2024-07-23T00:29:31+05:30</lastmod>
   </url><url>
     <loc>https://deus1704.vercel.app/</loc>
-    <lastmod>2024-07-03T17:29:31+05:30</lastmod>
+    <lastmod>2024-07-23T00:29:31+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -22,10 +22,10 @@
                 />
   </url><url>
     <loc>https://deus1704.vercel.app/posts/</loc>
-    <lastmod>2024-07-03T17:29:31+05:30</lastmod>
+    <lastmod>2024-07-23T00:29:31+05:30</lastmod>
   </url><url>
     <loc>https://deus1704.vercel.app/tags/</loc>
-    <lastmod>2024-07-03T17:29:31+05:30</lastmod>
+    <lastmod>2024-07-23T00:29:31+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -36,6 +36,9 @@
                 hreflang="en-in"
                 href="https://deus1704.vercel.app/tags/"
                 />
+  </url><url>
+    <loc>https://deus1704.vercel.app/posts/blog_3/</loc>
+    <lastmod>2024-07-03T17:29:31+05:30</lastmod>
   </url><url>
     <loc>https://deus1704.vercel.app/posts/blog_2/</loc>
     <lastmod>2024-06-20T16:29:31+05:30</lastmod>
